@@ -1,13 +1,12 @@
 import React from "react";
-import { Container } from '@material-ui/core';
+import { Typography } from "@material-ui/core";
 
 function header() {
   return (
-    <Container max-width="90%">
-      <h1>Nicole Dow</h1>
-      <h2>Full Stack Developer</h2>
-    </Container>
-  )
+      <Typography align="center" variant="h1" color="primary">
+      Nicole Dow
+      </Typography>
+  );
 }
 
 export default header;

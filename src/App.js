@@ -1,29 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
-import About from "./Containers/About";
-import Portfolio from "./Containers/Portfolio";
+import { ThemeProvider } from "@material-ui/core";
+import theme from './Theme/Theme';
+import Guidebar from './Containers/Guidebar';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Header />
-          <Navbar />
-          <About />
-        </Route>
-
-        <Route path="/portfolio">
-          <Header />
-          <Navbar />
-          <Portfolio />
-        </Route>
-      </Switch>
-    </Router>
+    <div className="app">
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Guidebar />
+      </ThemeProvider>
+    </div>
   );
 }
 
